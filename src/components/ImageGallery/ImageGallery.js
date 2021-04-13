@@ -1,5 +1,6 @@
 import styles from './ImageGallery.module.scss';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem.js';
+import PropTypes from 'prop-types';
 
 const ImageGallery = ({ items, onClick }) => {
   return (
@@ -18,3 +19,11 @@ const ImageGallery = ({ items, onClick }) => {
 };
 
 export default ImageGallery;
+
+ImageGallery.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.number,
+  key: PropTypes.number,
+  largeImg: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+};

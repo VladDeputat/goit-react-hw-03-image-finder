@@ -1,4 +1,5 @@
 import styles from './ImageGalleryItem.module.scss';
+import PropTypes from 'prop-types';
 
 const ImageGalleryItem = ({ src, alt, largeImg, onClick }) => {
   const openModal = () => onClick(largeImg, alt);
@@ -14,3 +15,10 @@ const ImageGalleryItem = ({ src, alt, largeImg, onClick }) => {
   );
 };
 export default ImageGalleryItem;
+
+ImageGalleryItem.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.number,
+  largeImg: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
